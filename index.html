@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVOE</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="src/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo"><img src="src/logo.png" alt="logo">EVOE</div>
+        <div class="hamburger" id="hamburger">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="menu" id="menu">
+          <a href="#produtos">Produtos</a>
+          <a href="#carrinho">Carrinho</a>
+          <a href="#sobre">Sobre Nós</a>
+          <a href="#contato">Contato</a>
+          <a href="#faq">Suporte</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="box">
+      <h1>Transforme suas ideias em arte impressa</h1>
+      <p>Gráfica têxtil e papelaria com qualidade, inovação e atendimento personalizado para seus projetos.</p>
+      <a href="https://api.whatsapp.com/send?phone=5544997200148" target="_blank" class="btn-contato">
+        CONTATO
+      </a>
+    </div>
+    <img src="src/produtos1.png" alt="Exemplo de impressão têxtil" />
+  </section>
+
+  <div class="prod-text">
+    <div class="prod-text-line"></div>
+  </div>
+  <!-- Carrossel -->
+  <div class="carousel" aria-label="Galeria de imagens">
+    <div class="carousel-inner" id="carousel-inner">
+      <img src="https://i.pinimg.com/736x/39/2e/1d/392e1d2e4f328e8e72b627482d6bb98e.jpg" alt="imagem1" />
+      <img src="https://i.pinimg.com/736x/1b/30/62/1b3062ef8fd949988e1e72922e6517ad.jpg" alt="imagem2" />
+      <img src="https://i.pinimg.com/736x/54/cd/fe/54cdfed370db00431b6bfee235d5a236.jpg" alt="imagem3" />
+      <img src="https://i.pinimg.com/736x/eb/f3/59/ebf359ecd097f507173b77fdf0d27486.jpg" alt="imagem4" />
+      <img src="https://i.pinimg.com/736x/a3/0d/78/a30d782d344d382ebfcf294491c794a0.jpg" alt="imagem5" />
+      <img src="https://i.pinimg.com/736x/79/36/c2/7936c2b9f9fff0dd03db78be1aad5564.jpg" alt="imagem6" />
+      <img src="https://i.pinimg.com/736x/b6/31/ca/b631ca91e6746b1fe1c7596a818ec423.jpg" alt="imagem7" />
+      <img src="https://i.pinimg.com/736x/b1/8f/b1/b18fb1e82fdd614ccbc55bd2d50d3f26.jpg" alt="imagem8" />
+    </div>
+    <div class="carousel-buttons">
+      <a id="prev">&#10094;</a>
+      <a id="next">&#10095;</a>
+    </div>
+  </div>
+
+
+  <div class="prod-text">
+    <div class="prod-text-line"></div>
+  </div>
+
+
+  <div class="prod-text">PRODUTOS <div class="prod-text-line"></div>
+  </div>
+  <!-- Pesquisa -->
+  <div class="search-bar">
+    <input type="search" id="searchInput" placeholder="Buscar produtos..." aria-label="Buscar produtos" />
+  </div>
+
+  <!-- Produtos -->
+
+  <section id="produtos" aria-label="Lista de produtos">
+    <!-- Os produtos serão inseridos aqui por JS -->
+  </section>
+
+  <!-- Carrinho -->
+  <section id="carrinho" aria-label="Carrinho de compras">
+    <div class="line">
+      <h2>Seu Carrinho</h2><button id="limpar-carrinho" class="btn-limpar"><svg xmlns="http://www.w3.org/2000/svg"
+          height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+          <path
+            d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
+        </svg></button>
+    </div>
+    <ul id="carrinho-lista" aria-live="polite"></ul>
+    <button id="finalizar-compra" disabled> <svg xmlns="http://www.w3.org/2000/svg" height="24px"
+        viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+        <path
+          d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z" />
+      </svg>Finalizar Compra via WhatsApp</button>
+
+  </section>
+
+  <section class="avaliacoes-section">
+    <h2>O que nossos clientes dizem</h2>
+    <div class="avaliacoes-carousel">
+      <a class="avaliacoes-btn prev" onclick="mudarAvaliacao(-1)">&#10094;</a>
+
+      <div class="avaliacao-item ativo">
+        <img src="https://randomuser.me/api/portraits/women/1.jpg" alt="Cliente 1">
+        <h3>Ana Paula</h3>
+        <p>"Produtos de ótima qualidade! Super recomendo."</p>
+        <div class="estrelas">★★★★★</div>
+      </div>
+
+      <div class="avaliacao-item">
+        <img src="https://randomuser.me/api/portraits/men/2.jpg" alt="Cliente 2">
+        <h3>Lucas Nogueira</h3>
+        <p>"Atendimento excelente e entrega rápida!"</p>
+        <div class="estrelas">★★★★★</div>
+      </div>
+
+      <div class="avaliacao-item">
+        <img src="https://randomuser.me/api/portraits/women/3.jpg" alt="Cliente 3">
+        <h3>Bruna Martins</h3>
+        <p>"Fiquei encantada com as estampas personalizadas."</p>
+        <div class="estrelas">★★★★★</div>
+      </div>
+
+      <div class="avaliacao-item">
+        <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="Cliente 4">
+        <h3>Fernando Lima</h3>
+        <p>"Ótimo custo-benefício. Voltarei a comprar!"</p>
+        <div class="estrelas">★★★★☆</div>
+      </div>
+
+      <div class="avaliacao-item">
+        <img src="https://randomuser.me/api/portraits/women/5.jpg" alt="Cliente 5">
+        <h3>Juliana Silva</h3>
+        <p>"Atendimento personalizado e produtos incríveis."</p>
+        <div class="estrelas">★★★★★</div>
+      </div>
+
+      <a class="avaliacoes-btn next" onclick="mudarAvaliacao(1)">&#10095;</a>
+    </div>
+  </section>
+
+  <section class="contato" id="contato">
+    <div class="contato-container">
+      <h2>Fale com a gente</h2>
+      <p>Tem alguma dúvida, pedido especial ou orçamento? Mande uma mensagem!</p>
+      <textarea id="mensagem" placeholder="Digite sua mensagem aqui..."></textarea>
+      <button onclick="enviarMensagem()">Enviar pelo WhatsApp</button>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="sobre">
+    <div class="prod-text">SOBRE NÓS <div class="prod-text-line"></div>
+    </div>
+    <p>Na Evoé, acreditamos que cada detalhe conta — e que toda ideia merece ganhar forma com estilo e
+      personalidade. Somos uma gráfica têxtil e papelaria especializada em produtos personalizáveis,
+      feitos para transformar momentos, marcas e memórias em algo único.
+      Seja em tecidos, papel, embalagens ou presentes criativos, oferecemos soluções sob medida para quem
+      quer imprimir sua identidade em tudo o que faz. Aqui, você encontra camisetas, aventais, ecobags,
+      cartinhas, caixinhas, tags, body de bebê, guardanapos, e muito mais — tudo pronto para ser
+      personalizado do seu jeito. </p>
+
+    <p> Criamos com carinho, imprimimos com qualidade e entregamos com propósito. Seja para uso pessoal,
+      para sua marca ou para presentear alguém especial, a Evoé é o lugar onde sua criatividade ganha
+      forma.</p>
+
+    <p> Evoé: personalize com alma.</p>
+  </section>
+
+  <section id="faq" style="max-width: 700px; margin: 2rem auto; padding: 1rem;">
+    <h2>FAQ - Perguntas Frequentes</h2>
+
+    <div class="faq-item">
+      <a class="faq-question">Qual o prazo para entrega?</a>
+      <div class="faq-answer">
+        <p>O prazo para entrega é de 5 a 10 dias úteis após a confirmação do pagamento. Se você for de Tapejara-PR,
+          oferecemos a opção de retirada. Combine pelo WhatsApp antes de finalizar o pedido.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <a class="faq-question">Posso trocar ou devolver um produto?</a>
+      <div class="faq-answer">
+        <p>Sim! Aceitamos troca ou devolução em até 7 dias após o recebimento, conforme nossa política.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <a class="faq-question">Como posso fazer um pedido?</a>
+      <div class="faq-answer">
+        <p>Você pode navegar pelos produtos na página inicial e clicar em 'Comprar'. Você será direcionado para o
+          WhatsApp para concluir a compra ou poderá adicionar os itens ao carrinho e, depois, finalizar o pedido na aba
+          'Carrinho'</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <a class="faq-question">Como faço para personalizar um produto?</a>
+      <div class="faq-answer">
+        <p>Você pode nos enviar a arte ou solicitar ajuda no momento da compra via WhatsApp.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-boxes">
+    <div class="info-box">
+      <i class="fa-solid fa-credit-card"></i>
+      <h4>Formas de Pagamento</h4>
+      <p>Cartão, Pix e Boleto bancário.</p>
+    </div>
+    <div class="info-box"><a href="https://shopee.com.br/evoeart?entryPoint=ShopBySearch&searchKeyword=evoe">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <h4>Estamos na Shopee!</h4>
+      <p>Compre com segurança, aproveite promoções e frete grátis.</p></a>
+    </div>
+    <div class="info-box">
+      <i class="fa-solid fa-truck"></i>
+      <h4>Formas de Entrega</h4>
+      <p>Correios, transportadora e retirada local.</p>
+    </div>
+    <div class="info-box">
+      <a href="https://www.instagram.com/evoe.art_/" target="_blank"> <i class="fa-brands fa-instagram"></i>
+        <h4>Nosso Instagram</h4>
+        <p>Siga-nos e veja nossos trabalhos!
+      </p></a>
+    </div>
+  </section>
+  <footer>
+    <p>© 2025 Gráfica & Papelaria EVOE | Contato: evoe2026@gmail.com | Tel: (44) 9 9720-9148 | Tapejara - PR </p>
+  </footer>
+  <a id="btnTopo" title="Voltar ao topo"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+      width="24px" fill="#e3e3e3">
+      <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+    </svg></a>
+  <script src="script.js"></script>
+</body>
+
+</html>
